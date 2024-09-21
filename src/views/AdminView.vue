@@ -142,7 +142,7 @@ export default {
         this.services = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       } catch (error) {
         console.error('Error al cargar los servicios:', error);
-        this.toast.error('No se pudieron cargar los servicios. Intenta de nuevo más tarde.'); // Usar toast aquí
+        this.toast.error('No se pudieron cargar los servicios. Intenta de nuevo más tarde.'); 
       }
     },
     async fetchReservations() {
@@ -151,12 +151,12 @@ export default {
         this.reservations = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       } catch (error) {
         console.error('Error al cargar las reservas:', error);
-        this.toast.error('No se pudieron cargar las reservas. Intenta de nuevo más tarde.'); // Usar toast aquí
+        this.toast.error('No se pudieron cargar las reservas. Intenta de nuevo más tarde.'); 
       }
     },
     async submitService() {
       if (!this.currentService.nombre || !this.currentService.descripcion || !this.currentService.duracion || !this.currentService.precio) {
-        this.toast.error('Por favor completa todos los campos'); // Usar toast aquí
+        this.toast.error('Por favor completa todos los campos'); 
         return;
       }
 
@@ -178,7 +178,7 @@ export default {
             precio: this.currentService.precio,
             imagen: imageURL
           });
-          this.toast.success('Servicio actualizado con éxito'); // Usar toast aquí
+          this.toast.success('Servicio actualizado con éxito'); 
           this.isEditing = false;
         } else {
           await addDoc(collection(db, 'services'), {
@@ -188,14 +188,14 @@ export default {
             precio: this.currentService.precio,
             imagen: imageURL
           });
-          this.toast.success('Servicio agregado con éxito'); // Usar toast aquí
+          this.toast.success('Servicio agregado con éxito'); 
         }
 
         this.resetForm();
         this.fetchServices();
       } catch (error) {
         console.error('Error al agregar/actualizar el servicio:', error);
-        this.toast.error('Ocurrió un error al guardar el servicio. Intenta de nuevo más tarde.'); // Usar toast aquí
+        this.toast.error('Ocurrió un error al guardar el servicio. Intenta de nuevo más tarde.'); 
       }
     },
     handleFileChange(event) {
@@ -213,28 +213,28 @@ export default {
     editService(service) {
       this.currentService = { ...service };
       this.isEditing = true;
-      this.imagePreview = service.imagen; // Mostrar la imagen actual
+      this.imagePreview = service.imagen; 
     },
     async deleteService(serviceId) {
       try {
         const serviceDoc = doc(db, 'services', serviceId);
         await deleteDoc(serviceDoc);
-        this.toast.success('Servicio eliminado con éxito'); // Usar toast aquí
+        this.toast.success('Servicio eliminado con éxito'); 
         this.fetchServices();
       } catch (error) {
         console.error('Error al eliminar el servicio:', error);
-        this.toast.error('Ocurrió un error al eliminar el servicio. Intenta de nuevo más tarde.'); // Usar toast aquí
+        this.toast.error('Ocurrió un error al eliminar el servicio. Intenta de nuevo más tarde.'); 
       }
     },
     async deleteReservation(reservationId) {
       try {
         const reservationDoc = doc(db, 'reservations', reservationId);
         await deleteDoc(reservationDoc);
-        this.toast.success('Reserva eliminada con éxito'); // Usar toast aquí
+        this.toast.success('Reserva eliminada con éxito'); 
         this.fetchReservations();
       } catch (error) {
         console.error('Error al eliminar la reserva:', error);
-        this.toast.error('Ocurrió un error al eliminar la reserva. Intenta de nuevo más tarde.'); // Usar toast aquí
+        this.toast.error('Ocurrió un error al eliminar la reserva. Intenta de nuevo más tarde.'); 
       }
     },
     toggleAccordion(accordionName) {

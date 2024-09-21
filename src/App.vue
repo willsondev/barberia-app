@@ -44,7 +44,7 @@
       </nav>
     </header>
 
-    <main class="flex-grow p-4 overflow-auto"> <!-- Ajusta aquí para evitar scroll -->
+    <main class="flex-grow p-4 overflow-auto">
       <router-view></router-view>
     </main>
 
@@ -114,11 +114,11 @@ export default {
 
 <style scoped>
 * {
-  box-sizing: border-box; /* Asegúrate de que el padding y el margen no generen scroll */
+  box-sizing: border-box; 
 }
 
 body {
-  margin: 0; /* Elimina márgenes predeterminados del body */
+  margin: 0; 
 }
 
 nav a {

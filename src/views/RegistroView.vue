@@ -45,7 +45,7 @@ export default {
         // Crear un documento en Firestore con el rol
         await setDoc(doc(db, 'users', user.uid), {
           email: this.email,
-          role: 'user' // Asigna un rol por defecto
+          role: 'user' 
         });
 
         toast.success('Registro exitoso');
@@ -60,5 +60,5 @@ export default {
 </script>
 
 <style scoped>
-/* No se requiere CSS adicional ya que se usa Tailwind */
+
 </style>

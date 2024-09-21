@@ -31,7 +31,7 @@ export default {
     return {
       email: '',
       password: '',
-      role: '' // Agregar la propiedad role
+      role: '' 
     };
   },
   methods: {
@@ -46,21 +46,21 @@ export default {
         // Obtener el documento del usuario de Firestore
         const userDoc = await getDoc(doc(db, 'users', user.uid));
         if (userDoc.exists()) {
-          this.role = userDoc.data().role; // Obtener el rol
-          toast.success(`Inicio de sesión exitoso como ${this.role}`); // Notificación de éxito
+          this.role = userDoc.data().role; 
+          toast.success(`Inicio de sesión exitoso como ${this.role}`); 
           
           // Redirigir según el rol
           if (this.role === 'admin') {
-            this.$router.push('/admin'); // Redirige a la página de admin
+            this.$router.push('/admin');
           } else {
-            this.$router.push('/'); // Redirige a la página principal
+            this.$router.push('/'); 
           }
         } else {
-          toast.error('No se encontró el usuario en Firestore.'); // Notificación de error
+          toast.error('No se encontró el usuario en Firestore.'); 
         }
       } catch (error) {
         console.error('Error en el inicio de sesión:', error);
-        toast.error(error.message); // Notificación de error
+        toast.error(error.message); 
       }
     }
   }
@@ -68,5 +68,5 @@ export default {
 </script>
 
 <style scoped>
-/* No se requiere CSS adicional ya que se usa Tailwind */
+
 </style>

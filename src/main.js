@@ -1,19 +1,19 @@
-// src/main.js
+
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router';  // Importa el router
-import Toast from 'vue-toastification';  // Importa Vue Toastification
-import 'vue-toastification/dist/index.css';  // Importa los estilos de Toastification
+import router from './router';  
+import Toast from 'vue-toastification';  
+import 'vue-toastification/dist/index.css';  
 import './main.css';
 
 const app = createApp(App);
 
-// Usa el router
+
 app.use(router);
 
-// Configura el plugin de notificaciones
+
 const options = {
-  // Puedes personalizar las opciones aquí
+  
   position: 'top-right',
   timeout: 2000,
   closeOnClick: true,
@@ -25,6 +25,6 @@ const options = {
   hideProgressBar: false,
 };
 
-app.use(Toast, options);  // Usa el plugin de notificaciones
+app.use(Toast, options);  
 
 app.mount('#app');

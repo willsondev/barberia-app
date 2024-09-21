@@ -73,21 +73,21 @@ export default {
       phoneNumber: '',
       selectedService: '',
       date: '',
-      services: [] // Lista de servicios traída de Firestore
+      services: [] 
     };
   },
   setup() {
     const toast = useToast();
-    return { toast }; // Regresa el toast para usarlo en el componente
+    return { toast }; 
   },
   async created() {
-    await this.fetchServices(); // Carga los servicios al crear el componente
+    await this.fetchServices(); 
     
-    const serviceId = this.$route.query.serviceId; // Obtener el ID del servicio
+    const serviceId = this.$route.query.serviceId; 
     if (serviceId) {
       const selectedService = this.services.find(service => service.id === serviceId);
       if (selectedService) {
-        this.selectedService = selectedService.nombre; // Rellenar el nombre del servicio
+        this.selectedService = selectedService.nombre; 
       }
     }
   },
@@ -98,12 +98,12 @@ export default {
         this.services = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       } catch (error) {
         console.error('Error al cargar los servicios:', error);
-        this.toast.error('No se pudieron cargar los servicios. Intenta de nuevo más tarde.'); // Cambiado a this.toast
+        this.toast.error('No se pudieron cargar los servicios. Intenta de nuevo más tarde.'); 
       }
     },
     async submitReservation() {
       if (!this.selectedService) {
-        this.toast.warning('Por favor selecciona un servicio'); // Cambiado a this.toast
+        this.toast.warning('Por favor selecciona un servicio'); 
         return;
       }
 
@@ -114,11 +114,11 @@ export default {
           service: this.selectedService,
           date: this.date
         });
-        this.toast.success('Reserva realizada con éxito'); // Cambiado a this.toast
+        this.toast.success('Reserva realizada con éxito'); 
         this.resetForm();
       } catch (error) {
         console.error('Error al realizar la reserva:', error);
-        this.toast.error('No se pudo realizar la reserva. Intenta de nuevo más tarde.'); // Cambiado a this.toast
+        this.toast.error('No se pudo realizar la reserva. Intenta de nuevo más tarde.'); 
       }
     },
     resetForm() {

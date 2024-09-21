@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  // Componente vacío, puedes agregar lógica si es necesario
+
 }
 </script>
 
@@ -58,8 +58,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 20vh; /* Centrar verticalmente */
-  overflow: hidden; /* Evitar desbordamiento */
+  height: 20vh; 
+  overflow: hidden;
   padding-top: -20px;
 }
 
@@ -70,23 +70,23 @@ export default {
 
 span {
   display: inline-block;
-  font-size: 8vw; /* Tamaño ajustado para ser más pequeño */
+  font-size: 8vw; 
   font-family: 'Chivo', sans-serif;
-  font-weight: 900; /* Grosor de la letra */
+  font-weight: 900;
   margin: -2px;
   text-shadow: 
-    0 2px 5px rgba(0, 0, 0, 0.3), /* Sombra suave */
-    0 0 25px rgba(204, 204, 204, 0.5); /* Sombra más difusa */
+    0 2px 5px rgba(0, 0, 0, 0.3), 
+    0 0 25px rgba(204, 204, 204, 0.5); 
 }
 
-/* Ajustes para pantallas pequeñas */
+
 @media (max-width: 600px) {
   span {
-    font-size: 12vw; /* Aumentar tamaño en pantallas pequeñas */
+    font-size: 12vw; 
   }
   
   .content > span {
-    margin: 0; /* Ajustar márgenes */
+    margin: 0; 
   }
 
   .content > span:nth-child(1) {

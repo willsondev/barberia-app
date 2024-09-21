@@ -34,19 +34,19 @@ router.beforeEach(async (to, from, next) => {
   const auth = getAuth();
   const user = auth.currentUser;
 
-  // Si el usuario no está autenticado y no intenta acceder a login o registro
+
   if (!user && to.path !== '/login' && to.path !== '/registro') {
     next({ path: '/login' });
   } 
-  // Si la ruta requiere autenticación y el usuario no está logueado
+ 
   else if (to.meta.requiresAuth && !user) {
     next({ path: '/login' });
   } 
-  // Si la ruta requiere un rol de administrador y el usuario no es administrador
+ 
   else if (to.meta.requiresAdmin && (!user || !(await isAdmin(user.uid)))) {
     next({ path: '/', query: { error: 'access_denied' } });
   } 
-  // Permitir el acceso si no se cumplen las restricciones anteriores
+
   else {
     next();
   }
@@ -58,10 +58,10 @@ async function isAdmin(uid) {
   return userDoc.exists() && userDoc.data().role === 'admin';
 }
 
-// Función de logout
+
 router.logout = () => {
   signOut(getAuth()).then(() => {
-    // Redirigir a la página de login
+
     router.push({ path: '/login' });
   });
 };

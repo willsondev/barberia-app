@@ -24,5 +24,5 @@ export default {
 </script>
 
 <style scoped>
-/* No se requiere CSS adicional ya que se usa Tailwind */
+
 </style>

@@ -71,13 +71,13 @@ export default {
   name: 'ServiciosView',
   data() {
     return {
-      servicios: [], // Lista de servicios traída de Firestore
+      servicios: [], 
       isZoomed: false,
       zoomedImage: ''
     };
   },
   async created() {
-    await this.fetchServicios(); // Carga los servicios al crear el componente
+    await this.fetchServicios(); 
   },
   methods: {
     async fetchServicios() {
@@ -90,7 +90,7 @@ export default {
       }
     },
     goToReserva() {
-      this.$router.push({ name: 'reservas' }); // Redirige a la vista de reservas
+      this.$router.push({ name: 'reservas' }); 
     },
     reservarServicio(id) {
       this.$router.push({ name: 'reservas', query: { serviceId: id } });
@@ -108,5 +108,5 @@ export default {
 </script>
 
 <style scoped>
-/* No se requiere CSS adicional ya que se usa Tailwind */
+
 </style>
