@@ -17,7 +17,7 @@
 
   <!-- Imagen que se muestra solo en pantallas pequeñas -->
   <div class="h-[50vh] block lg:hidden">
-    <img class="h-[70%] w-full object-cover object-bottom" src="../../public/img/incio.jpeg" alt="">
+    <img class="h-[70%] w-full object-cover object-bottom" src="/img/incio.jpeg" alt="">
   </div>
 
   <div class="grid grid-cols-3 text-center lg:mt-32 -mt-24 border">
