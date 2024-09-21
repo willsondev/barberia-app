@@ -3,14 +3,15 @@
   <div id="app" class="flex flex-col min-h-screen bg-[#151A1E] dark:text-gray-100">
     <header class="p-4 bg-[#151A1E] text-white">
       <div class="container flex justify-between items-center mx-auto">
-        <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex flex-col items-center">
-          <img class="h-12 w-35" src="../public/img/4.png" alt="Logo de la barbería">
-        </a>
+       <router-link to="/" aria-label="Back to homepage" class="flex flex-col items-center" rel="noopener noreferrer">
+  <img class="h-12 w-35" src="../public/img/4.png" alt="Logo de la barbería">
+</router-link>
 
-        <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex flex-col items-center">
-          <h1 class="text-xl font-bold">Barbería</h1>
-          <img class="h-7 w-30" src="../public/img/2.png" alt="Logo adicional">
-        </a>
+<router-link to="/" aria-label="Back to homepage" class="flex flex-col items-center" rel="noopener noreferrer">
+  <h1 class="text-xl font-bold">Barbería</h1>
+  <img class="h-7 w-30" src="../public/img/2.png" alt="Logo adicional">
+</router-link>
+
 
         <button title="Menu" type="button" class="p-4 md:hidden" @click="toggleMobileMenu" v-if="!isLoginRoute">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
