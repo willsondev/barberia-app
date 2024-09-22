@@ -83,8 +83,11 @@
           <li v-for="(reservation) in reservations" :key="reservation.id" 
               class="flex flex-col p-4 mb-4 border rounded-md">
             <p class="font-semibold text-black">Nombre: {{ reservation.name }}</p>
-            <p class="text-sm text-black">Teléfono: {{ reservation.phoneNumber }}</p>
-            <p class="text-sm text-black">{{ reservation.service }} - {{ reservation.date }}</p>
+              <p class="font-semibold text-black">Teléfono: {{ reservation.phoneNumber }}</p>
+             <p class="font-semibold text-black">Hora: {{ reservation.time }}</p>
+              <p class="font-semibold text-black">Dirección: {{ reservation.address }}</p>
+               <p class="font-semibold text-black">{{ reservation.service }}</p>
+            <p class="font-semibold text-black">{{ reservation.date }}</p>
             <button @click="deleteReservation(reservation.id)" 
               class="bg-red-500 text-white py-1 px-3 rounded-md hover:bg-red-600 transition duration-200 mt-2"
             >

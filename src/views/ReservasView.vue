@@ -50,6 +50,20 @@
         ref="dateInput" 
         class="border text-black border-gray-300 rounded-md p-2 mb-4 w-full"
       />
+
+      <input 
+        type="time" 
+        v-model="time" 
+        required 
+        class="border text-black border-gray-300 rounded-md p-2 mb-4 w-full"
+      />
+
+      <input 
+        v-model="address" 
+        placeholder="Dirección" 
+        required 
+        class="border text-black border-gray-300 rounded-md p-2 mb-4 w-full"
+      />
       
       <button 
         type="submit" 
@@ -60,8 +74,8 @@
     </form>
   </div>
 </template>
-<script>
 
+<script>
 import { db } from '@/firebase';
 import { collection, addDoc, getDocs } from 'firebase/firestore';
 import { useToast } from 'vue-toastification';
@@ -73,6 +87,8 @@ export default {
       phoneNumber: '',
       selectedService: '',
       date: '',
+      time: '', // Nuevo campo para la hora
+      address: '', // Nuevo campo para la dirección
       services: [] 
     };
   },
@@ -112,7 +128,9 @@ export default {
           name: this.name,
           phoneNumber: this.phoneNumber,
           service: this.selectedService,
-          date: this.date
+          date: this.date,
+          time: this.time, // Agregar hora a la reserva
+          address: this.address // Agregar dirección a la reserva
         });
         this.toast.success('Reserva realizada con éxito'); 
         this.resetForm();
@@ -126,6 +144,8 @@ export default {
       this.phoneNumber = '';
       this.selectedService = '';
       this.date = '';
+      this.time = ''; // Reiniciar campo de hora
+      this.address = ''; // Reiniciar campo de dirección
     }
   }
 };
