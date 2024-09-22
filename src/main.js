@@ -1,10 +1,11 @@
 
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router';  
-import Toast from 'vue-toastification';  
-import 'vue-toastification/dist/index.css';  
+import router from './router';
+import Toast from 'vue-toastification';
+import 'vue-toastification/dist/index.css';
 import './main.css';
+import './registerServiceWorker'
 
 const app = createApp(App);
 
@@ -25,6 +26,6 @@ const options = {
   hideProgressBar: false,
 };
 
-app.use(Toast, options);  
+app.use(Toast, options);
 
 app.mount('#app');
