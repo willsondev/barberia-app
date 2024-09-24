@@ -1,6 +1,6 @@
 <template>
   <div class="admin max-w-4xl mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-6">Panel de Administración</h1>
+    <h1 class="text-3xl font-bold mb-6 text-white">Panel de Administración</h1>
 
     <!-- Acordeón para el formulario de servicios -->
     <div class="accordion mb-6">

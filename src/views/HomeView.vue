@@ -22,21 +22,21 @@
 
   <div class="grid grid-cols-3 text-center lg:mt-32 -mt-24 border">
     <div class="flex flex-col items-center border">
-      <h1 class="text-xl font-bold">CONTACTO</h1>
+      <h1 class="text-xl font-bold text-white">CONTACTO</h1>
       <img src="../../public/img/1-footer.jpeg" alt="" class="w-24 h-24 rounded-full border-2 border-gray-800 filter grayscale brightness-90">
       <router-link to="/contacto" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-0.5 mb-2 mt-1 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
         Contacto
       </router-link>
     </div>
     <div class="flex flex-col items-center border">
-      <h1 class="text-xl font-bold">SERVICIOS</h1>
+      <h1 class="text-xl font-bold text-white">SERVICIOS</h1>
       <img src="../../public/img/2-footer.jpeg" alt="" class="w-24 h-24 rounded-full border-2 border-gray-800 filter grayscale brightness-90">
       <router-link to="/servicios" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-0.5 mb-2 mt-1 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
         servicios
       </router-link>
     </div>
     <div class="flex flex-col items-center border">
-      <h1 class="text-xl font-bold">RESERVAS</h1>
+      <h1 class="text-xl font-bold text-white">RESERVAS</h1>
       <img src="../../public/img/3-footer.jpeg" alt="" class="w-24 h-24 rounded-full border-2 border-gray-800 filter grayscale brightness-90">
       <router-link to="/reservas" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-0.5 mb-2 mt-1 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
         reservar
@@ -70,6 +70,7 @@ export default {
 
 span {
   display: inline-block;
+  color: white;
   font-size: 8vw; 
   font-family: 'Chivo', sans-serif;
   font-weight: 900;

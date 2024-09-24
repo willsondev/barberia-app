@@ -8,7 +8,7 @@
     </div>
 
     <form @submit.prevent="login" class="max-w-md mx-auto p-4 rounded-lg shadow-md mt-4">
-      <h2 class="text-2xl font-bold text-center mb-4">Bienvenido de nuevo</h2>
+      <h2 class="text-2xl text-white font-bold text-center mb-4">Bienvenido de nuevo</h2>
       
       <input v-model="email" placeholder="Correo electrónico" required class="border text-black border-gray-300 rounded-md p-2 mb-4 w-full" />
       <input v-model="password" type="password" placeholder="Contraseña" required class="text-black border border-gray-300 rounded-md p-2 mb-4 w-full" />

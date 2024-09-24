@@ -15,7 +15,7 @@
       </p>
     <router-link 
   to="/reservas" 
-  class="text-white bg-white border border-gray-300 focus:outline-none hover:bg-red-500 transition-colors duration-300 ease-in-out focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2 mb-2 mt-1 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-red-600 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+  class="text-white  border border-gray-300 focus:outline-none hover:bg-red-500 transition-colors duration-300 ease-in-out focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2 mb-2 mt-1 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-red-600 dark:hover:border-gray-600 dark:focus:ring-gray-700"
 >
   Reservar un Servicio
 </router-link>
